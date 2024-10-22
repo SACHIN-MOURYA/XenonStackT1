@@ -23,7 +23,7 @@ mongoose.connect(process.env.DATABASE_URL)
     .catch(err => console.log(err));
 
 app.get('/', (req, res) => {
-    res.send("HELLO");
+    res.json("HELLO");
 })
 
 
