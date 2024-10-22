@@ -9,7 +9,7 @@ const PORT = process.env.PORT
 export const app = express();
 
 
-app.use(cors({origin:'https://xenon-stack-t1-74sk.vercel.app' ,
+app.use(cors({origin:'' ,
     optionsSuccessStatus: 200,
     preflightContinue: false,
     methods: "GET,POST,OPTIONS",
