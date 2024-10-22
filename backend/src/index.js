@@ -10,7 +10,7 @@ const PORT = process.env.PORT
 export const app = express();
 
 
-app.use(cors({origin:'https://xenon-stack-t1-n9cf.vercel.app' ,
+app.use(cors({origin:'' ,
     optionsSuccessStatus: 200,
     preflightContinue: false,
     methods: "GET,POST,OPTIONS",
@@ -23,10 +23,12 @@ mongoose.connect(process.env.DATABASE_URL)
     .then(() => console.log("MongoDB connected"))
     .catch(err => console.log(err));
 
+app.get('/', (req, res) => {
+    res.json("HELLO");
+})
 
 
 const server = app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
   });
   
-
