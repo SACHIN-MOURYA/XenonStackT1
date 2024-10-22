@@ -10,7 +10,7 @@ const PORT = process.env.PORT
 export const app = express();
 
 
-app.use(cors({origin:'http://localhost:5173' ,
+app.use(cors({origin:'https://xenon-stack-t1-n9cf.vercel.app' ,
     optionsSuccessStatus: 200,
     preflightContinue: false,
     methods: "GET,POST,OPTIONS",
