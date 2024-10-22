@@ -9,22 +9,22 @@ const PORT = process.env.PORT
 export const app = express();
 
 
-app.use(cors({origin:'' ,
-    optionsSuccessStatus: 200,
-    preflightContinue: false,
-    methods: "GET,POST,OPTIONS",
-    credentials: true}))
-app.use(express.json())
-app.use(urlencoded({extended:true}))
-app.use("/api/v1", mainrouter)
-console.log(process.env.DATABASE_URL)
-mongoose.connect(process.env.DATABASE_URL)
-    .then(() => console.log("MongoDB connected"))
-    .catch(err => console.log(err));
+// app.use(cors({origin:'' ,
+//     optionsSuccessStatus: 200,
+//     preflightContinue: false,
+//     methods: "GET,POST,OPTIONS",
+//     credentials: true}))
+// app.use(express.json())
+// app.use(urlencoded({extended:true}))
+// app.use("/api/v1", mainrouter)
+// console.log(process.env.DATABASE_URL)
+// mongoose.connect(process.env.DATABASE_URL)
+//     .then(() => console.log("MongoDB connected"))
+//     .catch(err => console.log(err));
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
     res.json("HELLO");
-})
+});
 
 
 const server = app.listen(PORT, () => {
